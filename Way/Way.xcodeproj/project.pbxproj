@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C1E917CF554384FFC4CC40C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D899E05B92CC715A6F9E19 /* libPods.a */; };
+		83020F621B738B24009E8AFC /* NSUserDefaults+Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 83020F611B738B24009E8AFC /* NSUserDefaults+Location.m */; };
+		8311E6351B70682A0006BC1B /* RHMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E62E1B70682A0006BC1B /* RHMapView.m */; };
+		8311E6361B70682A0006BC1B /* RHMapViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6301B70682A0006BC1B /* RHMapViewManager.m */; };
+		8311E6371B70682A0006BC1B /* RHPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6321B70682A0006BC1B /* RHPointAnnotation.m */; };
+		8311E6381B70682A0006BC1B /* RHPolyline.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6341B70682A0006BC1B /* RHPolyline.m */; };
+		8311E63B1B706B930006BC1B /* RHMoreMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E63A1B706B930006BC1B /* RHMoreMenuCell.m */; };
+		8311E6411B706D3C0006BC1B /* RHMoreMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6401B706D3C0006BC1B /* RHMoreMenu.m */; };
+		8311E6441B70E9530006BC1B /* UIViewController+App.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6431B70E9530006BC1B /* UIViewController+App.m */; };
+		8311E6481B70F1620006BC1B /* RHSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6471B70F1620006BC1B /* RHSettingsViewController.m */; };
+		8311E64B1B70F22D0006BC1B /* RHSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E64A1B70F22D0006BC1B /* RHSettingsView.m */; };
+		8311E64F1B723A1F0006BC1B /* RHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E64E1B723A1F0006BC1B /* RHLocationManager.m */; };
+		8311E6521B7242440006BC1B /* RHCacheLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6511B7242440006BC1B /* RHCacheLocationManager.m */; };
+		835A66191B6766CB00E81FC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A66181B6766CB00E81FC9 /* main.m */; };
+		835A661C1B6766CB00E81FC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A661B1B6766CB00E81FC9 /* AppDelegate.m */; };
+		835A661F1B6766CB00E81FC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A661E1B6766CB00E81FC9 /* ViewController.m */; };
+		835A66241B6766CB00E81FC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835A66231B6766CB00E81FC9 /* Images.xcassets */; };
+		835A66271B6766CB00E81FC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 835A66251B6766CB00E81FC9 /* LaunchScreen.xib */; };
+		835A66331B6766CB00E81FC9 /* WayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A66321B6766CB00E81FC9 /* WayTests.m */; };
+		835A66841B67B73D00E81FC9 /* RHHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A667A1B67B73D00E81FC9 /* RHHomeView.m */; };
+		835A66851B67B73D00E81FC9 /* RHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A667C1B67B73D00E81FC9 /* RHHomeViewController.m */; };
+		835A66861B67B73D00E81FC9 /* RHMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A667F1B67B73D00E81FC9 /* RHMoreView.m */; };
+		835A66871B67B73D00E81FC9 /* RHMoreViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A66811B67B73D00E81FC9 /* RHMoreViewAdapter.m */; };
+		835A66881B67B73D00E81FC9 /* RHMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A66831B67B73D00E81FC9 /* RHMoreViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		835A662D1B6766CB00E81FC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 835A660B1B6766CB00E81FC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835A66121B6766CB00E81FC9;
+			remoteInfo = Way;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		571AD576C8C2BCB174C498FA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		70E307DD20D8CCA89DA26268 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		73D899E05B92CC715A6F9E19 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		83020F601B738B24009E8AFC /* NSUserDefaults+Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Location.h"; sourceTree = "<group>"; };
+		83020F611B738B24009E8AFC /* NSUserDefaults+Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Location.m"; sourceTree = "<group>"; };
+		8311E62C1B70682A0006BC1B /* RHMapConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMapConfig.h; sourceTree = "<group>"; };
+		8311E62D1B70682A0006BC1B /* RHMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMapView.h; sourceTree = "<group>"; };
+		8311E62E1B70682A0006BC1B /* RHMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMapView.m; sourceTree = "<group>"; };
+		8311E62F1B70682A0006BC1B /* RHMapViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMapViewManager.h; sourceTree = "<group>"; };
+		8311E6301B70682A0006BC1B /* RHMapViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMapViewManager.m; sourceTree = "<group>"; };
+		8311E6311B70682A0006BC1B /* RHPointAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHPointAnnotation.h; sourceTree = "<group>"; };
+		8311E6321B70682A0006BC1B /* RHPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHPointAnnotation.m; sourceTree = "<group>"; };
+		8311E6331B70682A0006BC1B /* RHPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHPolyline.h; sourceTree = "<group>"; };
+		8311E6341B70682A0006BC1B /* RHPolyline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHPolyline.m; sourceTree = "<group>"; };
+		8311E6391B706B930006BC1B /* RHMoreMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMoreMenuCell.h; sourceTree = "<group>"; };
+		8311E63A1B706B930006BC1B /* RHMoreMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMoreMenuCell.m; sourceTree = "<group>"; };
+		8311E63F1B706D3C0006BC1B /* RHMoreMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMoreMenu.h; sourceTree = "<group>"; };
+		8311E6401B706D3C0006BC1B /* RHMoreMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMoreMenu.m; sourceTree = "<group>"; };
+		8311E6421B70E9530006BC1B /* UIViewController+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+App.h"; sourceTree = "<group>"; };
+		8311E6431B70E9530006BC1B /* UIViewController+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+App.m"; sourceTree = "<group>"; };
+		8311E6461B70F1620006BC1B /* RHSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSettingsViewController.h; sourceTree = "<group>"; };
+		8311E6471B70F1620006BC1B /* RHSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSettingsViewController.m; sourceTree = "<group>"; };
+		8311E6491B70F22D0006BC1B /* RHSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHSettingsView.h; sourceTree = "<group>"; };
+		8311E64A1B70F22D0006BC1B /* RHSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHSettingsView.m; sourceTree = "<group>"; };
+		8311E64D1B723A1F0006BC1B /* RHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHLocationManager.h; sourceTree = "<group>"; };
+		8311E64E1B723A1F0006BC1B /* RHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHLocationManager.m; sourceTree = "<group>"; };
+		8311E6501B7242440006BC1B /* RHCacheLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCacheLocationManager.h; sourceTree = "<group>"; };
+		8311E6511B7242440006BC1B /* RHCacheLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCacheLocationManager.m; sourceTree = "<group>"; };
+		835A66131B6766CB00E81FC9 /* Way.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Way.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		835A66171B6766CB00E81FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		835A66181B6766CB00E81FC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		835A661A1B6766CB00E81FC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		835A661B1B6766CB00E81FC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		835A661D1B6766CB00E81FC9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		835A661E1B6766CB00E81FC9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		835A66231B6766CB00E81FC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		835A66261B6766CB00E81FC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		835A662C1B6766CB00E81FC9 /* WayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		835A66311B6766CB00E81FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		835A66321B6766CB00E81FC9 /* WayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WayTests.m; sourceTree = "<group>"; };
+		835A663C1B6769BE00E81FC9 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		835A66761B67B58000E81FC9 /* RHCommonDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCommonDefines.h; sourceTree = "<group>"; };
+		835A66771B67B58000E81FC9 /* RHNotificationMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHNotificationMacro.h; sourceTree = "<group>"; };
+		835A66791B67B73D00E81FC9 /* RHHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHHomeView.h; sourceTree = "<group>"; };
+		835A667A1B67B73D00E81FC9 /* RHHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHHomeView.m; sourceTree = "<group>"; };
+		835A667B1B67B73D00E81FC9 /* RHHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHHomeViewController.h; sourceTree = "<group>"; };
+		835A667C1B67B73D00E81FC9 /* RHHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHHomeViewController.m; sourceTree = "<group>"; };
+		835A667E1B67B73D00E81FC9 /* RHMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMoreView.h; sourceTree = "<group>"; };
+		835A667F1B67B73D00E81FC9 /* RHMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMoreView.m; sourceTree = "<group>"; };
+		835A66801B67B73D00E81FC9 /* RHMoreViewAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMoreViewAdapter.h; sourceTree = "<group>"; };
+		835A66811B67B73D00E81FC9 /* RHMoreViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMoreViewAdapter.m; sourceTree = "<group>"; };
+		835A66821B67B73D00E81FC9 /* RHMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMoreViewController.h; sourceTree = "<group>"; };
+		835A66831B67B73D00E81FC9 /* RHMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMoreViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		835A66101B6766CB00E81FC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C1E917CF554384FFC4CC40C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835A66291B6766CB00E81FC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B91A7165CE2553F266B5EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				571AD576C8C2BCB174C498FA /* Pods.debug.xcconfig */,
+				70E307DD20D8CCA89DA26268 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1E8A2CADA33928B278CE5E36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				73D899E05B92CC715A6F9E19 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8311E62B1B70682A0006BC1B /* RHMap */ = {
+			isa = PBXGroup;
+			children = (
+				8311E62C1B70682A0006BC1B /* RHMapConfig.h */,
+				8311E62D1B70682A0006BC1B /* RHMapView.h */,
+				8311E62E1B70682A0006BC1B /* RHMapView.m */,
+				8311E62F1B70682A0006BC1B /* RHMapViewManager.h */,
+				8311E6301B70682A0006BC1B /* RHMapViewManager.m */,
+				8311E6311B70682A0006BC1B /* RHPointAnnotation.h */,
+				8311E6321B70682A0006BC1B /* RHPointAnnotation.m */,
+				8311E6331B70682A0006BC1B /* RHPolyline.h */,
+				8311E6341B70682A0006BC1B /* RHPolyline.m */,
+			);
+			path = RHMap;
+			sourceTree = "<group>";
+		};
+		8311E6451B70F1430006BC1B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8311E6461B70F1620006BC1B /* RHSettingsViewController.h */,
+				8311E6471B70F1620006BC1B /* RHSettingsViewController.m */,
+				8311E6491B70F22D0006BC1B /* RHSettingsView.h */,
+				8311E64A1B70F22D0006BC1B /* RHSettingsView.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		8311E64C1B723A020006BC1B /* RHLocation */ = {
+			isa = PBXGroup;
+			children = (
+				8311E64D1B723A1F0006BC1B /* RHLocationManager.h */,
+				8311E64E1B723A1F0006BC1B /* RHLocationManager.m */,
+				8311E6501B7242440006BC1B /* RHCacheLocationManager.h */,
+				8311E6511B7242440006BC1B /* RHCacheLocationManager.m */,
+				83020F601B738B24009E8AFC /* NSUserDefaults+Location.h */,
+				83020F611B738B24009E8AFC /* NSUserDefaults+Location.m */,
+			);
+			path = RHLocation;
+			sourceTree = "<group>";
+		};
+		835A660A1B6766CB00E81FC9 = {
+			isa = PBXGroup;
+			children = (
+				835A66151B6766CB00E81FC9 /* Way */,
+				835A662F1B6766CB00E81FC9 /* WayTests */,
+				835A66141B6766CB00E81FC9 /* Products */,
+				0B91A7165CE2553F266B5EFA /* Pods */,
+				1E8A2CADA33928B278CE5E36 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		835A66141B6766CB00E81FC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				835A66131B6766CB00E81FC9 /* Way.app */,
+				835A662C1B6766CB00E81FC9 /* WayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		835A66151B6766CB00E81FC9 /* Way */ = {
+			isa = PBXGroup;
+			children = (
+				8311E64C1B723A020006BC1B /* RHLocation */,
+				8311E6451B70F1430006BC1B /* Settings */,
+				8311E62B1B70682A0006BC1B /* RHMap */,
+				835A66781B67B73D00E81FC9 /* Home */,
+				835A667D1B67B73D00E81FC9 /* More */,
+				835A66751B67B55B00E81FC9 /* Macro */,
+				835A661A1B6766CB00E81FC9 /* AppDelegate.h */,
+				835A661B1B6766CB00E81FC9 /* AppDelegate.m */,
+				835A661D1B6766CB00E81FC9 /* ViewController.h */,
+				835A661E1B6766CB00E81FC9 /* ViewController.m */,
+				835A66231B6766CB00E81FC9 /* Images.xcassets */,
+				835A66251B6766CB00E81FC9 /* LaunchScreen.xib */,
+				835A66161B6766CB00E81FC9 /* Supporting Files */,
+				8311E6421B70E9530006BC1B /* UIViewController+App.h */,
+				8311E6431B70E9530006BC1B /* UIViewController+App.m */,
+			);
+			path = Way;
+			sourceTree = "<group>";
+		};
+		835A66161B6766CB00E81FC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				835A66171B6766CB00E81FC9 /* Info.plist */,
+				835A66181B6766CB00E81FC9 /* main.m */,
+				835A663C1B6769BE00E81FC9 /* Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		835A662F1B6766CB00E81FC9 /* WayTests */ = {
+			isa = PBXGroup;
+			children = (
+				835A66321B6766CB00E81FC9 /* WayTests.m */,
+				835A66301B6766CB00E81FC9 /* Supporting Files */,
+			);
+			path = WayTests;
+			sourceTree = "<group>";
+		};
+		835A66301B6766CB00E81FC9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				835A66311B6766CB00E81FC9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		835A66751B67B55B00E81FC9 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				835A66761B67B58000E81FC9 /* RHCommonDefines.h */,
+				835A66771B67B58000E81FC9 /* RHNotificationMacro.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		835A66781B67B73D00E81FC9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				835A66791B67B73D00E81FC9 /* RHHomeView.h */,
+				835A667A1B67B73D00E81FC9 /* RHHomeView.m */,
+				835A667B1B67B73D00E81FC9 /* RHHomeViewController.h */,
+				835A667C1B67B73D00E81FC9 /* RHHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		835A667D1B67B73D00E81FC9 /* More */ = {
+			isa = PBXGroup;
+			children = (
+				835A667E1B67B73D00E81FC9 /* RHMoreView.h */,
+				835A667F1B67B73D00E81FC9 /* RHMoreView.m */,
+				835A66801B67B73D00E81FC9 /* RHMoreViewAdapter.h */,
+				835A66811B67B73D00E81FC9 /* RHMoreViewAdapter.m */,
+				835A66821B67B73D00E81FC9 /* RHMoreViewController.h */,
+				835A66831B67B73D00E81FC9 /* RHMoreViewController.m */,
+				8311E6391B706B930006BC1B /* RHMoreMenuCell.h */,
+				8311E63A1B706B930006BC1B /* RHMoreMenuCell.m */,
+				8311E63F1B706D3C0006BC1B /* RHMoreMenu.h */,
+				8311E6401B706D3C0006BC1B /* RHMoreMenu.m */,
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		835A66121B6766CB00E81FC9 /* Way */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835A66361B6766CB00E81FC9 /* Build configuration list for PBXNativeTarget "Way" */;
+			buildPhases = (
+				9B831361E332BE40152F2D67 /* Check Pods Manifest.lock */,
+				835A660F1B6766CB00E81FC9 /* Sources */,
+				835A66101B6766CB00E81FC9 /* Frameworks */,
+				835A66111B6766CB00E81FC9 /* Resources */,
+				DEE77D39C6D704688EDF2DDC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Way;
+			productName = Way;
+			productReference = 835A66131B6766CB00E81FC9 /* Way.app */;
+			productType = "com.apple.product-type.application";
+		};
+		835A662B1B6766CB00E81FC9 /* WayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 835A66391B6766CB00E81FC9 /* Build configuration list for PBXNativeTarget "WayTests" */;
+			buildPhases = (
+				835A66281B6766CB00E81FC9 /* Sources */,
+				835A66291B6766CB00E81FC9 /* Frameworks */,
+				835A662A1B6766CB00E81FC9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				835A662E1B6766CB00E81FC9 /* PBXTargetDependency */,
+			);
+			name = WayTests;
+			productName = WayTests;
+			productReference = 835A662C1B6766CB00E81FC9 /* WayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		835A660B1B6766CB00E81FC9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = zhuruhong;
+				TargetAttributes = {
+					835A66121B6766CB00E81FC9 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					835A662B1B6766CB00E81FC9 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 835A66121B6766CB00E81FC9;
+					};
+				};
+			};
+			buildConfigurationList = 835A660E1B6766CB00E81FC9 /* Build configuration list for PBXProject "Way" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 835A660A1B6766CB00E81FC9;
+			productRefGroup = 835A66141B6766CB00E81FC9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				835A66121B6766CB00E81FC9 /* Way */,
+				835A662B1B6766CB00E81FC9 /* WayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		835A66111B6766CB00E81FC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835A66271B6766CB00E81FC9 /* LaunchScreen.xib in Resources */,
+				835A66241B6766CB00E81FC9 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835A662A1B6766CB00E81FC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B831361E332BE40152F2D67 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEE77D39C6D704688EDF2DDC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		835A660F1B6766CB00E81FC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8311E64F1B723A1F0006BC1B /* RHLocationManager.m in Sources */,
+				8311E6521B7242440006BC1B /* RHCacheLocationManager.m in Sources */,
+				835A661F1B6766CB00E81FC9 /* ViewController.m in Sources */,
+				8311E6381B70682A0006BC1B /* RHPolyline.m in Sources */,
+				8311E6371B70682A0006BC1B /* RHPointAnnotation.m in Sources */,
+				8311E6361B70682A0006BC1B /* RHMapViewManager.m in Sources */,
+				8311E6351B70682A0006BC1B /* RHMapView.m in Sources */,
+				8311E6441B70E9530006BC1B /* UIViewController+App.m in Sources */,
+				8311E6411B706D3C0006BC1B /* RHMoreMenu.m in Sources */,
+				835A66851B67B73D00E81FC9 /* RHHomeViewController.m in Sources */,
+				8311E63B1B706B930006BC1B /* RHMoreMenuCell.m in Sources */,
+				835A66881B67B73D00E81FC9 /* RHMoreViewController.m in Sources */,
+				83020F621B738B24009E8AFC /* NSUserDefaults+Location.m in Sources */,
+				835A661C1B6766CB00E81FC9 /* AppDelegate.m in Sources */,
+				835A66841B67B73D00E81FC9 /* RHHomeView.m in Sources */,
+				835A66191B6766CB00E81FC9 /* main.m in Sources */,
+				8311E64B1B70F22D0006BC1B /* RHSettingsView.m in Sources */,
+				835A66861B67B73D00E81FC9 /* RHMoreView.m in Sources */,
+				835A66871B67B73D00E81FC9 /* RHMoreViewAdapter.m in Sources */,
+				8311E6481B70F1620006BC1B /* RHSettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		835A66281B6766CB00E81FC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835A66331B6766CB00E81FC9 /* WayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		835A662E1B6766CB00E81FC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 835A66121B6766CB00E81FC9 /* Way */;
+			targetProxy = 835A662D1B6766CB00E81FC9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		835A66251B6766CB00E81FC9 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				835A66261B6766CB00E81FC9 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		835A66341B6766CB00E81FC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		835A66351B6766CB00E81FC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		835A66371B6766CB00E81FC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 571AD576C8C2BCB174C498FA /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Way/Prefix.pch;
+				INFOPLIST_FILE = Way/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		835A66381B6766CB00E81FC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70E307DD20D8CCA89DA26268 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Way/Prefix.pch;
+				INFOPLIST_FILE = Way/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		835A663A1B6766CB00E81FC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Way.app/Way";
+			};
+			name = Debug;
+		};
+		835A663B1B6766CB00E81FC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Way.app/Way";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		835A660E1B6766CB00E81FC9 /* Build configuration list for PBXProject "Way" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835A66341B6766CB00E81FC9 /* Debug */,
+				835A66351B6766CB00E81FC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		835A66361B6766CB00E81FC9 /* Build configuration list for PBXNativeTarget "Way" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835A66371B6766CB00E81FC9 /* Debug */,
+				835A66381B6766CB00E81FC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		835A66391B6766CB00E81FC9 /* Build configuration list for PBXNativeTarget "WayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				835A663A1B6766CB00E81FC9 /* Debug */,
+				835A663B1B6766CB00E81FC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 835A660B1B6766CB00E81FC9 /* Project object */;
+}
