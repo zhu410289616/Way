@@ -22,6 +22,7 @@ extern NSString *const kValueLocationCoordinateLng;
 - (CLLocationCoordinate2D)locationCoordinate;
 
 - (void)setLocation:(CLLocation *)location;
+- (CLLocation *)locationWithTimeout:(NSTimeInterval)timeout;
 - (CLLocation *)location;
 
 @end

@@ -31,7 +31,7 @@ NSString *const kValueLocationCoordinateTime = @"kValueLocationCoordinateTime";
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setDouble:coordinate.latitude forKey:kValueLocationCoordinateLat];
-    [userDefaults setDouble:coordinate.latitude forKey:kValueLocationCoordinateLat];
+    [userDefaults setDouble:coordinate.longitude forKey:kValueLocationCoordinateLng];
     [userDefaults synchronize];
 }
 
@@ -60,6 +60,17 @@ NSString *const kValueLocationCoordinateTime = @"kValueLocationCoordinateTime";
     [userDefaults setDouble:coordinate.latitude forKey:kValueLocationCoordinateLat];
     [userDefaults setDouble:coordinate.longitude forKey:kValueLocationCoordinateLng];
     [userDefaults synchronize];
+}
+
+- (CLLocation *)locationWithTimeout:(NSTimeInterval)timeout
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSTimeInterval timeInterval = [userDefaults doubleForKey:kValueLocationCoordinateTime];
+    NSDate *timestamp = [NSDate dateWithTimeIntervalSince1970:timeInterval];
+    if ([timestamp timeIntervalSinceNow] > timeout) {
+        return nil;
+    }
+    return [self location];
 }
 
 - (CLLocation *)location

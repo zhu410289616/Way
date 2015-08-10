@@ -7,6 +7,7 @@
 //
 
 #import "RHLocationManager.h"
+#import "RHCoordinateUtil.h"
 
 #define _CacheLocationManager [RHCacheLocationManager sharedInstance]
 
@@ -14,7 +15,8 @@
 
 @property (nonatomic, strong, readonly) NSMutableArray *locationArray;
 
-@property (nonatomic, assign, readonly) CLLocation *cacheLocation;
+/** 最近一次缓存的gps位置信息 */
+@property (nonatomic, strong, readonly) CLLocation *cacheLocation;
 
 - (void)startUpdatingLocationUseCache;
 

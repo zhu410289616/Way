@@ -36,7 +36,7 @@ NSString *const kNotificationLocationData = @"kNotificationLocationData";
 - (instancetype)init
 {
     if (self = [super init]) {
-        _authorizationType = RHLocationAuthorizationTypeWhenInUse;
+        _authorizationType = RHLocationAuthorizationTypeAlways;
         _locationState = RHLocationManagerStateUnknow;
     }
     return self;
@@ -97,11 +97,17 @@ NSString *const kNotificationLocationData = @"kNotificationLocationData";
     _locationState = RHLocationManagerStateUnknow;
 }
 
-- (void)startUpdatingHeading
+- (void)startUpdatingHeadingWithHeadingFilter:(CGFloat)filter
 {
     if ([CLLocationManager headingAvailable]) {
+        _locationManager.headingFilter = filter;
         [_locationManager startUpdatingHeading];
     }
+}
+
+- (void)startUpdatingHeading
+{
+    [self startUpdatingHeadingWithHeadingFilter:1];
 }
 
 - (void)stopUpdatingHeading
@@ -149,6 +155,17 @@ NSString *const kNotificationLocationData = @"kNotificationLocationData";
     [self notifyLocationStateChanged:RHLocationManagerStateFailed];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+{
+    if (newHeading.headingAccuracy < 0) {
+        return;
+    }
+    
+    // Use the true heading if it is valid.
+    CLLocationDirection theHeading = ((newHeading.trueHeading > 0) ? newHeading.trueHeading : newHeading.magneticHeading);
+    NSLog(@"theHeading: %f", theHeading);
+}
+
 #pragma mark -
 #pragma mark private method
 
@@ -164,6 +181,7 @@ NSString *const kNotificationLocationData = @"kNotificationLocationData";
 
 - (void)startLocationWithAlwaysAuthorization
 {
+    _locationManager.pausesLocationUpdatesAutomatically = NO;
 #ifdef __IPHONE_8_0
     if ([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
         [_locationManager requestAlwaysAuthorization];

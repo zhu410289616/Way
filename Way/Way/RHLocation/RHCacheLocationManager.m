@@ -21,7 +21,9 @@
 - (void)startUpdatingLocationUseCache
 {
     _cacheLocation = [[NSUserDefaults sharedInstance] location];
-    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationLocationData object:_cacheLocation userInfo:@{@"Source":@"CacheLocation"}];
+    if ([RHCoordinateUtil isValidCoordinate:_cacheLocation.coordinate]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationLocationData object:_cacheLocation userInfo:@{@"Source":@"Cache"}];
+    }
     [super startUpdatingLocation];
 }
 
@@ -33,5 +35,7 @@
         [_locationArray addObject:locations];
     }
 }
+
+
 
 @end
