@@ -13,6 +13,7 @@
 
 #import <AMapNaviKit/AMapNaviKit.h>
 #import "RHCacheLocationManager.h"
+#import "UIImage+App.h"
 
 @interface AppDelegate ()
 {
@@ -34,6 +35,14 @@
     // Override point for customization after application launch.
     
     [self configAMap];
+    
+    //导航中按钮view颜色
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    //导航背景色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor greenColor]];
+    //导航中返回按钮尖头指示(两个要配合使用)
+    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageWithColor:[UIColor yellowColor] size:CGSizeMake(10, 10)]];
+    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageWithColor:[UIColor yellowColor] size:CGSizeMake(10, 10)]];
     
     RHHomeViewController *homeController = [[RHHomeViewController alloc] init];
     RHMoreViewController *moreController = [[RHMoreViewController alloc] init];

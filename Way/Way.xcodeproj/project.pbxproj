@@ -20,6 +20,11 @@
 		8311E64B1B70F22D0006BC1B /* RHSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E64A1B70F22D0006BC1B /* RHSettingsView.m */; };
 		8311E64F1B723A1F0006BC1B /* RHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E64E1B723A1F0006BC1B /* RHLocationManager.m */; };
 		8311E6521B7242440006BC1B /* RHCacheLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8311E6511B7242440006BC1B /* RHCacheLocationManager.m */; };
+		834CD1A51B79FE9E006C3332 /* RHAuthorize.m in Sources */ = {isa = PBXBuildFile; fileRef = 834CD1A41B79FE9E006C3332 /* RHAuthorize.m */; };
+		834CD1A81B7A0F52006C3332 /* TrackInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 834CD1A71B7A0F52006C3332 /* TrackInfo.m */; };
+		834CD1B01B7A2214006C3332 /* RHLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 834CD1AF1B7A2214006C3332 /* RHLoginViewController.m */; };
+		834CD1B31B7A2226006C3332 /* RHLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 834CD1B21B7A2226006C3332 /* RHLoginView.m */; };
+		834CD1B71B7A22C8006C3332 /* RHUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 834CD1B61B7A22C8006C3332 /* RHUserService.m */; };
 		835A66191B6766CB00E81FC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A66181B6766CB00E81FC9 /* main.m */; };
 		835A661C1B6766CB00E81FC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A661B1B6766CB00E81FC9 /* AppDelegate.m */; };
 		835A661F1B6766CB00E81FC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A661E1B6766CB00E81FC9 /* ViewController.m */; };
@@ -31,6 +36,12 @@
 		835A66861B67B73D00E81FC9 /* RHMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A667F1B67B73D00E81FC9 /* RHMoreView.m */; };
 		835A66871B67B73D00E81FC9 /* RHMoreViewAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A66811B67B73D00E81FC9 /* RHMoreViewAdapter.m */; };
 		835A66881B67B73D00E81FC9 /* RHMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 835A66831B67B73D00E81FC9 /* RHMoreViewController.m */; };
+		83F7901C1B78945400B10927 /* RHCoordinateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F7901B1B78945400B10927 /* RHCoordinateUtil.m */; };
+		83F790231B78BCF600B10927 /* Way.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83F790211B78BCF600B10927 /* Way.xcdatamodeld */; };
+		83F790261B78BDB400B10927 /* UserEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F790251B78BDB400B10927 /* UserEntity.m */; };
+		83F7902C1B78C67500B10927 /* HttpTestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F7902B1B78C67500B10927 /* HttpTestAPI.m */; };
+		83F790301B79A32500B10927 /* RHRequestToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F7902F1B79A32500B10927 /* RHRequestToken.m */; };
+		83F790341B79CE4A00B10927 /* NSData+HMAC_SHA1.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F790331B79CE4A00B10927 /* NSData+HMAC_SHA1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +83,16 @@
 		8311E64E1B723A1F0006BC1B /* RHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHLocationManager.m; sourceTree = "<group>"; };
 		8311E6501B7242440006BC1B /* RHCacheLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCacheLocationManager.h; sourceTree = "<group>"; };
 		8311E6511B7242440006BC1B /* RHCacheLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCacheLocationManager.m; sourceTree = "<group>"; };
+		834CD1A31B79FE9E006C3332 /* RHAuthorize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHAuthorize.h; sourceTree = "<group>"; };
+		834CD1A41B79FE9E006C3332 /* RHAuthorize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHAuthorize.m; sourceTree = "<group>"; };
+		834CD1A61B7A0F52006C3332 /* TrackInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackInfo.h; sourceTree = "<group>"; };
+		834CD1A71B7A0F52006C3332 /* TrackInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackInfo.m; sourceTree = "<group>"; };
+		834CD1AE1B7A2214006C3332 /* RHLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHLoginViewController.h; sourceTree = "<group>"; };
+		834CD1AF1B7A2214006C3332 /* RHLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHLoginViewController.m; sourceTree = "<group>"; };
+		834CD1B11B7A2226006C3332 /* RHLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHLoginView.h; sourceTree = "<group>"; };
+		834CD1B21B7A2226006C3332 /* RHLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHLoginView.m; sourceTree = "<group>"; };
+		834CD1B51B7A22C8006C3332 /* RHUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHUserService.h; sourceTree = "<group>"; };
+		834CD1B61B7A22C8006C3332 /* RHUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHUserService.m; sourceTree = "<group>"; };
 		835A66131B6766CB00E81FC9 /* Way.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Way.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		835A66171B6766CB00E81FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		835A66181B6766CB00E81FC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +118,19 @@
 		835A66811B67B73D00E81FC9 /* RHMoreViewAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMoreViewAdapter.m; sourceTree = "<group>"; };
 		835A66821B67B73D00E81FC9 /* RHMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHMoreViewController.h; sourceTree = "<group>"; };
 		835A66831B67B73D00E81FC9 /* RHMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHMoreViewController.m; sourceTree = "<group>"; };
+		83F7901A1B78945400B10927 /* RHCoordinateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCoordinateUtil.h; sourceTree = "<group>"; };
+		83F7901B1B78945400B10927 /* RHCoordinateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHCoordinateUtil.m; sourceTree = "<group>"; };
+		83F790221B78BCF600B10927 /* Way.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Way.xcdatamodel; sourceTree = "<group>"; };
+		83F790241B78BDB400B10927 /* UserEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEntity.h; sourceTree = "<group>"; };
+		83F790251B78BDB400B10927 /* UserEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEntity.m; sourceTree = "<group>"; };
+		83F790271B78BE1400B10927 /* RHCoreDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHCoreDataProtocol.h; sourceTree = "<group>"; };
+		83F7902A1B78C67500B10927 /* HttpTestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTestAPI.h; sourceTree = "<group>"; };
+		83F7902B1B78C67500B10927 /* HttpTestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTestAPI.m; sourceTree = "<group>"; };
+		83F7902E1B79A32500B10927 /* RHRequestToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHRequestToken.h; sourceTree = "<group>"; };
+		83F7902F1B79A32500B10927 /* RHRequestToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHRequestToken.m; sourceTree = "<group>"; };
+		83F790311B79A3B900B10927 /* RHKuaiPanConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHKuaiPanConfig.h; sourceTree = "<group>"; };
+		83F790321B79CE4A00B10927 /* NSData+HMAC_SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+HMAC_SHA1.h"; sourceTree = "<group>"; };
+		83F790331B79CE4A00B10927 /* NSData+HMAC_SHA1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+HMAC_SHA1.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +205,30 @@
 				8311E6511B7242440006BC1B /* RHCacheLocationManager.m */,
 				83020F601B738B24009E8AFC /* NSUserDefaults+Location.h */,
 				83020F611B738B24009E8AFC /* NSUserDefaults+Location.m */,
+				83F7901A1B78945400B10927 /* RHCoordinateUtil.h */,
+				83F7901B1B78945400B10927 /* RHCoordinateUtil.m */,
 			);
 			path = RHLocation;
+			sourceTree = "<group>";
+		};
+		834CD1AD1B7A2209006C3332 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				834CD1AE1B7A2214006C3332 /* RHLoginViewController.h */,
+				834CD1AF1B7A2214006C3332 /* RHLoginViewController.m */,
+				834CD1B11B7A2226006C3332 /* RHLoginView.h */,
+				834CD1B21B7A2226006C3332 /* RHLoginView.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		834CD1B41B7A22B4006C3332 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				834CD1B51B7A22C8006C3332 /* RHUserService.h */,
+				834CD1B61B7A22C8006C3332 /* RHUserService.m */,
+			);
+			path = UserService;
 			sourceTree = "<group>";
 		};
 		835A660A1B6766CB00E81FC9 = {
@@ -198,6 +254,10 @@
 		835A66151B6766CB00E81FC9 /* Way */ = {
 			isa = PBXGroup;
 			children = (
+				834CD1AD1B7A2209006C3332 /* Login */,
+				83F7902D1B79A2FD00B10927 /* KuaiPanAPI */,
+				83F790281B78C5DD00B10927 /* BizLogicService */,
+				83F790201B78BCB300B10927 /* RHCoreData */,
 				8311E64C1B723A020006BC1B /* RHLocation */,
 				8311E6451B70F1430006BC1B /* Settings */,
 				8311E62B1B70682A0006BC1B /* RHMap */,
@@ -279,6 +339,51 @@
 				8311E6401B706D3C0006BC1B /* RHMoreMenu.m */,
 			);
 			path = More;
+			sourceTree = "<group>";
+		};
+		83F790201B78BCB300B10927 /* RHCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				83F790241B78BDB400B10927 /* UserEntity.h */,
+				83F790251B78BDB400B10927 /* UserEntity.m */,
+				83F790211B78BCF600B10927 /* Way.xcdatamodeld */,
+				83F790271B78BE1400B10927 /* RHCoreDataProtocol.h */,
+			);
+			path = RHCoreData;
+			sourceTree = "<group>";
+		};
+		83F790281B78C5DD00B10927 /* BizLogicService */ = {
+			isa = PBXGroup;
+			children = (
+				834CD1B41B7A22B4006C3332 /* UserService */,
+				83F790291B78C63200B10927 /* DownloadService */,
+			);
+			path = BizLogicService;
+			sourceTree = "<group>";
+		};
+		83F790291B78C63200B10927 /* DownloadService */ = {
+			isa = PBXGroup;
+			children = (
+				83F7902A1B78C67500B10927 /* HttpTestAPI.h */,
+				83F7902B1B78C67500B10927 /* HttpTestAPI.m */,
+				834CD1A61B7A0F52006C3332 /* TrackInfo.h */,
+				834CD1A71B7A0F52006C3332 /* TrackInfo.m */,
+			);
+			path = DownloadService;
+			sourceTree = "<group>";
+		};
+		83F7902D1B79A2FD00B10927 /* KuaiPanAPI */ = {
+			isa = PBXGroup;
+			children = (
+				83F7902E1B79A32500B10927 /* RHRequestToken.h */,
+				83F7902F1B79A32500B10927 /* RHRequestToken.m */,
+				83F790311B79A3B900B10927 /* RHKuaiPanConfig.h */,
+				83F790321B79CE4A00B10927 /* NSData+HMAC_SHA1.h */,
+				83F790331B79CE4A00B10927 /* NSData+HMAC_SHA1.m */,
+				834CD1A31B79FE9E006C3332 /* RHAuthorize.h */,
+				834CD1A41B79FE9E006C3332 /* RHAuthorize.m */,
+			);
+			path = KuaiPanAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +521,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8311E64F1B723A1F0006BC1B /* RHLocationManager.m in Sources */,
+				83F7901C1B78945400B10927 /* RHCoordinateUtil.m in Sources */,
+				834CD1B71B7A22C8006C3332 /* RHUserService.m in Sources */,
 				8311E6521B7242440006BC1B /* RHCacheLocationManager.m in Sources */,
 				835A661F1B6766CB00E81FC9 /* ViewController.m in Sources */,
 				8311E6381B70682A0006BC1B /* RHPolyline.m in Sources */,
@@ -424,17 +531,26 @@
 				8311E6351B70682A0006BC1B /* RHMapView.m in Sources */,
 				8311E6441B70E9530006BC1B /* UIViewController+App.m in Sources */,
 				8311E6411B706D3C0006BC1B /* RHMoreMenu.m in Sources */,
+				83F790341B79CE4A00B10927 /* NSData+HMAC_SHA1.m in Sources */,
 				835A66851B67B73D00E81FC9 /* RHHomeViewController.m in Sources */,
 				8311E63B1B706B930006BC1B /* RHMoreMenuCell.m in Sources */,
+				834CD1A51B79FE9E006C3332 /* RHAuthorize.m in Sources */,
 				835A66881B67B73D00E81FC9 /* RHMoreViewController.m in Sources */,
+				83F790231B78BCF600B10927 /* Way.xcdatamodeld in Sources */,
 				83020F621B738B24009E8AFC /* NSUserDefaults+Location.m in Sources */,
 				835A661C1B6766CB00E81FC9 /* AppDelegate.m in Sources */,
 				835A66841B67B73D00E81FC9 /* RHHomeView.m in Sources */,
 				835A66191B6766CB00E81FC9 /* main.m in Sources */,
+				83F790301B79A32500B10927 /* RHRequestToken.m in Sources */,
+				83F7902C1B78C67500B10927 /* HttpTestAPI.m in Sources */,
+				834CD1B31B7A2226006C3332 /* RHLoginView.m in Sources */,
+				834CD1B01B7A2214006C3332 /* RHLoginViewController.m in Sources */,
 				8311E64B1B70F22D0006BC1B /* RHSettingsView.m in Sources */,
 				835A66861B67B73D00E81FC9 /* RHMoreView.m in Sources */,
+				83F790261B78BDB400B10927 /* UserEntity.m in Sources */,
 				835A66871B67B73D00E81FC9 /* RHMoreViewAdapter.m in Sources */,
 				8311E6481B70F1620006BC1B /* RHSettingsViewController.m in Sources */,
+				834CD1A81B7A0F52006C3332 /* TrackInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +759,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		83F790211B78BCF600B10927 /* Way.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83F790221B78BCF600B10927 /* Way.xcdatamodel */,
+			);
+			currentVersion = 83F790221B78BCF600B10927 /* Way.xcdatamodel */;
+			path = Way.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 835A660B1B6766CB00E81FC9 /* Project object */;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "UIViewController+App.h"
+#import "UIImage+App.h"
 
 @implementation UIViewController (App)
 
@@ -70,6 +71,27 @@
 - (void)doRightBarButtonAction
 {
     RHLogLog(@"doRightBarButtonAction...");
+}
+
+- (void)updateNavigationBarStyle
+{
+    RHLogLog(@"updateNavigationBarStyle...");
+    
+    //导航背景色
+    self.navigationController.navigationBar.barTintColor = [UIColor orangeColor];
+    //导航标题文字属性[颜色，字体]
+    self.navigationController.navigationBar.titleTextAttributes = @{
+                                                                    NSForegroundColorAttributeName:[UIColor whiteColor],
+                                                                    NSFontAttributeName:[UIFont systemFontOfSize:20]
+                                                                    };
+    
+    //导航中按钮文字颜色
+    [[UIBarButtonItem appearance] setTintColor:[UIColor redColor]];
+    
+    //状态栏颜色, 配合plist属性设置 View controller-based status bar appearance = NO
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];//7.0
+    [self setNeedsStatusBarAppearanceUpdate];
+    
 }
 
 @end

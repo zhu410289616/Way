@@ -11,7 +11,12 @@
 
 #import "RHSettingsViewController.h"
 
+#import "NSUserDefaults+Location.h"
 #import <AMapNaviKit/AMapNaviKit.h>
+#import "RHPolyline.h"
+
+#import "HttpTestAPI.h"
+#import "RHRequestToken.h"
 
 @interface RHHomeViewController () <RHHomeViewDelegate, AMapNaviManagerDelegate>
 {
@@ -28,6 +33,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self updateNavigationBarStyle];//
+    
+    self.title = @"home";
+    self.navigationItem.backBarButtonItem = [self backBarButtonItem];
     self.navigationItem.rightBarButtonItem = [self rightBarButtonItem];
     
     _homeView = [[RHHomeView alloc] init];
@@ -44,8 +53,34 @@
     [_homeView.mapView setCenterCoordinate:coordinate zoomLevel:16.5f];
     
     //
+    [_homeView addAnnotationWithCoordinate:CLLocationCoordinate2DMake(30.28069629, 120.11678696)];
+    [_homeView addAnnotationWithCoordinate:CLLocationCoordinate2DMake(30.18069629, 120.11678696)];
+    
+    //
     _naviManager = [[AMapNaviManager alloc] init];
     _naviManager.delegate = self;
+    
+    HttpTestAPI *api = [[HttpTestAPI alloc] init];
+    [api start];
+    
+    //构造多边形数据对象
+    CLLocationCoordinate2D coordinates[4];
+    coordinates[0].latitude = 39.810892;
+    coordinates[0].longitude = 116.233413;
+    
+    coordinates[1].latitude = 39.816600;
+    coordinates[1].longitude = 116.331842;
+    
+    coordinates[2].latitude = 39.762187;
+    coordinates[2].longitude = 116.357932;
+    
+    coordinates[3].latitude = 39.733653;
+    coordinates[3].longitude = 116.278255;
+    
+    MAPolygon *polygon = [MAPolygon polygonWithCoordinates:coordinates count:4];
+    
+    //在地图上添加折线对象
+    [_homeView.mapView addOverlay: polygon];
     
 }
 
@@ -68,25 +103,52 @@
 
 - (void)didRefreshAction
 {
-    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:30.28069629 longitude:120.11678696];
-    AMapNaviPoint *endPoint = [AMapNaviPoint locationWithLatitude:30.18069629 longitude:120.11678696];
+    AMapNaviPoint *startPoint = [AMapNaviPoint locationWithLatitude:30.16069629 longitude:120.12678696];
     
-    NSMutableArray *endPoints = [[NSMutableArray alloc] init];
-    [endPoints addObject:endPoint];
+    NSMutableArray *naviPoints = [[NSMutableArray alloc] init];
     
     [_homeView.mapView.annotations enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         MAPointAnnotation *annotation = obj;
         CLLocationCoordinate2D coordinate = annotation.coordinate;
         AMapNaviPoint *point = [AMapNaviPoint locationWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-        [endPoints addObject:point];
+        [naviPoints addObject:point];
     }];
+    NSLog(@"_homeView.mapView.annotations: %ld", _homeView.mapView.annotations.count);
     
-    [_naviManager calculateDriveRouteWithStartPoints:@[startPoint] endPoints:endPoints wayPoints:nil drivingStrategy:AMapNaviDrivingStrategyDefault];
+    if (_homeView.mapView.annotations.count < 2) {
+        return;
+    }
+    
+    [_naviManager calculateDriveRouteWithStartPoints:@[startPoint] endPoints:naviPoints wayPoints:nil drivingStrategy:AMapNaviDrivingStrategyDefault];
+    
+    [_naviManager calculateWalkRouteWithStartPoints:@[startPoint] endPoints:naviPoints];
 }
 
 - (void)didSingleTapAction:(CLLocationCoordinate2D)coordinate
 {
+    [[NSUserDefaults sharedInstance] setLocationCoordinate:coordinate];
     [_homeView addAnnotationWithCoordinate:coordinate];
+}
+
+#pragma mark -
+
+- (void)showRouteWithNaviRoute:(AMapNaviRoute *)naviRoute
+{
+    if (naviRoute == nil) {
+        return;
+    }
+    
+    NSUInteger coordianteCount = [naviRoute.routeCoordinates count];
+    CLLocationCoordinate2D coordinates[coordianteCount];
+    for (int i = 0; i < coordianteCount; i++) {
+        AMapNaviPoint *aCoordinate = naviRoute.routeCoordinates[i];
+        coordinates[i] = CLLocationCoordinate2DMake(aCoordinate.latitude, aCoordinate.longitude);
+    }
+    
+    RHPolyline *tempPolyline = [RHPolyline polylineWithCoordinates:coordinates count:coordianteCount];
+    UIEdgeInsets edgeInsets = UIEdgeInsetsMake(kSizeFrom750(400), kSizeFrom750(150), kSizeFrom750(260), kSizeFrom750(150));
+    [_homeView.mapView setVisibleMapRect:[tempPolyline boundingMapRect] edgePadding:edgeInsets animated:YES];
+    [_homeView.mapView addOverlay:tempPolyline];
 }
 
 #pragma mark -
@@ -122,6 +184,8 @@
     
     AMapNaviRoute *route = naviManager.naviRoute;
     RHLogLog(@"route.routeLength: %d", route.routeLength);
+    
+    [self showRouteWithNaviRoute:route];
 }
 
 /*!

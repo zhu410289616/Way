@@ -8,6 +8,7 @@
 
 #import "RHSettingsViewController.h"
 #import "RHSettingsView.h"
+#import "UIImage+App.h"
 
 @interface RHSettingsViewController ()
 {
@@ -23,6 +24,9 @@
     // Do any additional setup after loading the view.
     
     self.title = @"title";
+    //当前controler显示的back内容
+    self.navigationController.navigationBar.topItem.backBarButtonItem = [self backBarButtonItem];
+    //下一级controler显示的back内容
     self.navigationItem.backBarButtonItem = [self backBarButtonItem];
     
     _settingsView = [[RHSettingsView alloc] init];
@@ -32,6 +36,13 @@
         make.size.equalTo(self.view);
     }];
     
+}
+
+- (UIBarButtonItem *)backBarButtonItem
+{
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageWithColor:[UIColor yellowColor] size:CGSizeMake(10, 10)] style:UIBarButtonItemStylePlain target:self action:nil];
+    return item;
 }
 
 @end

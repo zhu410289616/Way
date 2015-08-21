@@ -21,4 +21,6 @@
 - (void)doLeftBarButtonAction;
 - (void)doRightBarButtonAction;
 
+- (void)updateNavigationBarStyle;
+
 @end

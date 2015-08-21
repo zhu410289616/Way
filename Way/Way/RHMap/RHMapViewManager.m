@@ -217,6 +217,15 @@
         polylineView.lineCapType = kMALineCapRound;
         polylineView.strokeColor = [UIColor purpleColor];
         return polylineView;
+    } else if ([overlay isKindOfClass:[MAPolygon class]]) {
+        MAPolygonView *polygonView = [[MAPolygonView alloc] initWithPolygon:overlay];
+        
+        polygonView.lineWidth = 5.f;
+        polygonView.strokeColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.8];
+        polygonView.fillColor = [UIColor colorWithRed:0.77 green:0.88 blue:0.94 alpha:0.8];
+        polygonView.lineJoinType = kMALineJoinMiter;//连接类型
+        
+        return polygonView;
     }
     
     return nil;
